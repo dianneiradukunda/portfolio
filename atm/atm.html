@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM System | Dianne Iradukunda</title>
+  <link rel="stylesheet" href="atm.css">
+</head>
+<body>
+  <div class="atm-container">
+
+    <!-- REGISTER SCREEN -->
+    <div class="atm-box" id="registerScreen">
+      <h2>Create Account</h2>
+      <input type="text" id="regUsername" placeholder="Choose Username" required>
+      <input type="password" id="regPin" maxlength="4" placeholder="Set 4-digit PIN" required>
+      <input type="password" id="regPinConfirm" maxlength="4" placeholder="Confirm PIN" required>
+      <button class="btn primary" id="createAccountBtn">Create Account</button>
+      <p id="regMsg"></p>
+      <p>Already have an account? <a href="#" onclick="showScreen('loginScreen')">Login</a></p>
+    </div>
+
+    <!-- LOGIN SCREEN -->
+    <div class="atm-box hidden" id="loginScreen">
+      <h2>ATM LOGIN</h2>
+      <input type="text" id="username" placeholder="Enter Username" required>
+      <input type="password" id="pin" maxlength="4" placeholder="Enter 4-digit PIN" required>
+      <button id="loginBtn" class="btn primary">Login</button>
+      <p id="loginMsg"></p>
+      <p>Don’t have an account? <a href="#" onclick="showScreen('registerScreen')">Register</a></p>
+    </div>
+
+    <!-- MAIN MENU -->
+    <div class="atm-box hidden" id="menuScreen">
+      <h2>Welcome, <span id="userDisplay"></span></h2>
+      <p>Balance: <strong id="balanceDisplay">0</strong> RWF</p>
+      <div class="menu-buttons">
+        <button class="btn" onclick="showScreen('depositScreen')">Deposit</button>
+        <button class="btn" onclick="showScreen('withdrawScreen')">Withdraw</button>
+        <button class="btn" onclick="checkBalance()">Check Balance</button>
+        <button class="btn" onclick="showScreen('changePinScreen')">Change PIN</button>
+        <button class="btn secondary" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <!-- DEPOSIT -->
+    <div class="atm-box hidden" id="depositScreen">
+      <h2>Deposit Money</h2>
+      <input type="number" id="depositAmount" placeholder="Enter amount" min="1">
+      <button class="btn primary" onclick="deposit()">Deposit</button>
+      <button class="btn secondary" onclick="showScreen('menuScreen')">Back</button>
+      <p id="depositMsg"></p>
+    </div>
+
+    <!-- WITHDRAW -->
+    <div class="atm-box hidden" id="withdrawScreen">
+      <h2>Withdraw Money</h2>
+      <input type="number" id="withdrawAmount" placeholder="Enter amount" min="1">
+      <button class="btn primary" onclick="withdraw()">Withdraw</button>
+      <button class="btn secondary" onclick="showScreen('menuScreen')">Back</button>
+      <p id="withdrawMsg"></p>
+    </div>
+
+    <!-- CHANGE PIN -->
+    <div class="atm-box hidden" id="changePinScreen">
+      <h2>Change PIN</h2>
+      <input type="password" id="newPin" maxlength="4" placeholder="New 4-digit PIN">
+      <input type="password" id="confirmPin" maxlength="4" placeholder="Confirm New PIN">
+      <button class="btn primary" onclick="changePin()">Submit</button>
+      <button class="btn secondary" onclick="showScreen('menuScreen')">Back</button>
+      <p id="pinMsg"></p>
+    </div>
+  </div>
+
+  <script src="atm.js"></script>
+</body>
+</html>

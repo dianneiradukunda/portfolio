@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #0b1a46, #001028);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.atm-container {
+  background: #0b1a46;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,255,231,0.3);
+  width: 320px;
+  text-align: center;
+}
+
+.atm-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  color: #00ffe7;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #00b32d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00a125;
+}
+
+.btn.secondary {
+  background: #444;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+strong {
+  color: #00ffe7;
+}
+
+a {
+  color: #00ffe7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .atm-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
