@@ -6,30 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dianne Iradukunda | Full Stack Web Developer Portfolio</title>
 
-  <!-- SEO Description -->
-  <meta name="description" content="I'm Dianne Iradukunda, a full stack web developer specializing in responsive web design, backend APIs, and modern JavaScript applications. Explore my portfolio and projects." />
-
-  <!-- Keywords -->
-  <meta name="keywords" content="Dianne Iradukunda, full stack developer, web developer portfolio, JavaScript developer, front-end, backend, React, Node.js, Rwanda developer, hire developer" />
-
-  <!-- Author -->
+  <!-- SEO -->
+  <meta name="description" content="I'm Dianne Iradukunda, a full stack web developer specializing in responsive web design, backend APIs, and modern JavaScript applications." />
+  <meta name="keywords" content="Dianne Iradukunda, full stack developer, web developer portfolio, JavaScript developer, React, Node.js, Rwanda developer" />
   <meta name="author" content="Dianne Iradukunda" />
 
-  <!-- Open Graph (For Social Sharing) -->
+  <!-- Social Share -->
   <meta property="og:title" content="Dianne Iradukunda | Full Stack Developer Portfolio" />
-  <meta property="og:description" content="Explore Dianne Iradukunda’s projects and web development services. I build responsive, scalable, and modern web applications." />
+  <meta property="og:description" content="Explore my projects, services, and background in web development." />
   <meta property="og:image" content="profile.jpg" />
-  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:url" content="https://dianneiradukunda.github.io/portfolio/" />
   <meta property="og:type" content="website" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dianne Iradukunda | Full Stack Developer" />
-  <meta name="twitter:description" content="Full stack developer building modern web apps with clean backend logic and responsive design." />
+  <meta name="twitter:description" content="Full stack developer building modern, responsive web applications." />
   <meta name="twitter:image" content="profile.jpg" />
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://yourdomain.com" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://dianneiradukunda.github.io/portfolio/" />
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -39,23 +35,6 @@
 
   <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-  <!-- Schema.org JSON-LD (Structured Data for Google) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Person",
-    "name": "Dianne Iradukunda",
-    "jobTitle": "Full Stack Web Developer",
-    "url": "https://yourdomain.com",
-    "image": "https://yourdomain.com/profile.jpg",
-    "sameAs": [
-      "https://github.com/yourgithub",
-      "https://linkedin.com/in/yourlinkedin"
-    ],
-    "description": "Full stack developer specializing in building responsive and scalable web applications with React, Node.js, and modern technologies."
-  }
-  </script>
 </head>
 <body>
   <header>
@@ -73,6 +52,11 @@
     <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
   </header>
 
+  <!-- 🔍 Search Bar -->
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Search projects, services, or education..." />
+  </div>
+
   <main>
     <section class="hero">
       <div class="hero-image">
@@ -80,7 +64,7 @@
       </div>
       <div class="hero-text">
         <h2>Hi, I'm <span>Dianne</span></h2>
-        <p>I'm a <strong>Full Stack Developer</strong> who builds modern, responsive, and scalable web applications with great user experiences and clean backend logic.</p>
+        <p>I'm a <strong>Full Stack Developer</strong> building modern, responsive, and scalable web applications.</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn primary">Hire Me</a>
           <a href="#projects" class="btn secondary">View Projects</a>
@@ -93,7 +77,7 @@
       <div class="grid">
         <article class="card">
           <h4>🌐 Portfolio Website</h4>
-          <p>A responsive personal website built with HTML, CSS, and JavaScript to showcase my skills and experience.</p>
+          <p>A responsive personal website built with HTML, CSS, and JavaScript to showcase my skills.</p>
         </article>
         <article class="card">
           <h4>💼 Task Manager App</h4>
@@ -101,12 +85,12 @@
         </article>
         <article class="card">
           <h4>🛒 E-commerce Platform</h4>
-          <p>Full-featured store built with React, Node.js, and MongoDB, including payments and product management.</p>
+          <p>Full-featured store built with React, Node.js, and MongoDB.</p>
         </article>
         <a href="atm/atm.html" class="card" style="text-decoration: none; color: aliceblue">
           <img src="atm.png" alt="ATM System Project Screenshot" width="150" height="150" style="border-radius: 20px;" loading="lazy" />
           <h4>💳 ATM System</h4>
-          <p>An ATM system built with HTML, CSS, and JavaScript for real-time account visualization.</p>
+          <p>An ATM system built with HTML, CSS, and JavaScript.</p>
         </a>
       </div>
     </section>
@@ -138,9 +122,9 @@
     <section id="contact" class="section contact">
       <h3 class="section-title">Contact Me</h3>
       <form id="contact-form">
-        <input type="text" name="user_name" placeholder="Your Name" aria-label="Your Name" required />
-        <input type="email" name="user_email" placeholder="Your Email" aria-label="Your Email" required />
-        <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
+        <input type="text" name="user_name" placeholder="Your Name" required />
+        <input type="email" name="user_email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
         <button type="submit" class="btn primary">Send</button>
       </form>
       <p id="form-status"></p>
@@ -151,6 +135,7 @@
     <p>© 2025 Dianne Iradukunda. All rights reserved.</p>
   </footer>
 
+  <!-- Main Script -->
   <script src="script.js"></script>
 </body>
 </html>
