@@ -22,7 +22,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Dianne Iradukunda | Full Stack Developer" />
-  <meta name="twitter:description" content="Full stack developer building modern, responsive web applications." />
+  <meta name="twitter:description" content="Full stack web developer building modern, responsive web applications." />
   <meta name="twitter:image" content="profile.jpg" />
 
   <!-- Canonical -->
@@ -65,7 +65,7 @@
       </div>
       <div class="hero-text">
         <h2>Hi, I'm <span>Dianne</span></h2>
-        <p>I'm a <strong>Full Stack Developer</strong> building modern, responsive, and scalable web applications.</p>
+        <p>I'm a <strong>Full Stack web Developer</strong> building modern, responsive, and scalable web applications.</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn primary">Hire Me</a>
           <a href="#projects" class="btn secondary">View Projects</a>
@@ -138,5 +138,23 @@
 
   <!-- Main Script -->
   <script src="script.js"></script>
+  <script>
+    (function() {
+  emailjs.init("rZPLP_JhDf09Rs_3I"); // ← YOUR PUBLIC KEY
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_ysf7ugp", "template_yarbvo7", this)
+      .then(() => {
+        document.getElementById("form-status").textContent = "✅  sent!";
+        this.reset();
+      }, (error) => {
+        document.getElementById("form-status").textContent = "❌ Failed to send .";
+        console.error(error);
+      });
+  });
+})();   
+  </script>
 </body>
 </html>

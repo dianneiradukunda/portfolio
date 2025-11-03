@@ -32,11 +32,11 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #66fcf1;
+  color: #05f1e2;
 }
 
 .logo span {
-  color: #45a29e;
+  color: #e4e9e9;
 }
 
 nav ul {
@@ -73,6 +73,7 @@ nav ul li a:hover {
   padding: 1rem;
   background-color: #1f2833;
   border-bottom: 1px solid #45a29e33;
+   box-shadow: hsl(176, 96%, 48%);
 }
 
 #search {
@@ -84,12 +85,13 @@ nav ul li a:hover {
   background-color: #0b0c10;
   color: #fff;
   font-size: 1rem;
+  box-shadow: hsl(176, 96%, 48%);
 }
 
 #search:focus {
   outline: none;
-  border-color: #66fcf1;
-  box-shadow: 0 0 8px #66fcf188;
+  border-color: hsl(176, 96%, 69%);
+  box-shadow: 0 0 8px hwb(176 2% 3% / 0.918);
 }
 
 /* -------------------- */
@@ -123,7 +125,7 @@ nav ul li a:hover {
   width: 250px;
   border-radius: 50%;
   margin: 1rem;
-  box-shadow: 0 0 20px #45a29e55;
+  box-shadow:  #66fcf1  0 0 30px;
 }
 
 .hero-text {
@@ -156,12 +158,12 @@ nav ul li a:hover {
 }
 
 .btn.primary {
-  background-color: #45a29e;
+  background-color: #0be4d9;
   color: #0b0c10;
 }
 
 .btn.primary:hover {
-  background-color: #66fcf1;
+  background-color: #11c9bc;
 }
 
 .btn.secondary {
@@ -171,7 +173,7 @@ nav ul li a:hover {
 }
 
 .btn.secondary:hover {
-  background-color: #45a29e;
+  background-color: hwb(180 6% 3% / 0.959);
   color: #0b0c10;
 }
 
@@ -188,13 +190,13 @@ nav ul li a:hover {
   background-color: #1f2833;
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 0 10px #00000033;
+  box-shadow: 0 0 15px hwb(177 11% 6% / 0.973);
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  background-color: #202833;
+  background-color: #03030327;
 }
 
 /* -------------------- */
